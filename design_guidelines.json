@@ -1,0 +1,110 @@
+{
+  "theme_and_archetype": {
+    "theme": "light",
+    "archetype": "5 (Jewel & Luxury)",
+    "description": "Editorial gallery aesthetic mixing High-Savoir Faire with cultural storytelling. Uses a museum-white base with deep, cinematic, high-contrast accents (Burgundy, Emerald, Champagne Gold) to evoke exclusivity and provenance."
+  },
+  "typography": {
+    "headings": {
+      "family": "Bodoni Moda",
+      "import_url": "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap",
+      "rules": "Use for all H1, H2, and H3. Tracking should be tight (`tracking-tighter`). Emphasize italics for specific high-fashion words (e.g., 'Savoir-Faire')."
+    },
+    "body": {
+      "family": "Jost",
+      "import_url": "https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap",
+      "rules": "Use for body text, overlines, and UI labels. Clean, minimalist geometric sans-serif to contrast the heavy serif headings. Labels must be uppercase with wide tracking (`tracking-[0.2em]`)."
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base leading-relaxed",
+      "caption": "text-xs uppercase tracking-widest"
+    }
+  },
+  "colors": {
+    "background": {
+      "default": "#FDFDFD",
+      "alt": "#F5F3F0",
+      "dark_section": "#0F0A0A"
+    },
+    "primary": {
+      "default": "#5D1A23",
+      "hover": "#4A151C",
+      "foreground": "#FDFDFD"
+    },
+    "accents": {
+      "emerald": "#1B4332",
+      "champagne": "#E5D5C0"
+    },
+    "text": {
+      "primary": "#0F0A0A",
+      "secondary": "rgba(15, 10, 10, 0.6)",
+      "inverse": "#FDFDFD",
+      "inverse_muted": "rgba(253, 253, 253, 0.7)"
+    },
+    "borders": {
+      "subtle": "rgba(15, 10, 10, 0.1)",
+      "champagne": "rgba(229, 213, 192, 0.5)"
+    }
+  },
+  "spacing_and_layout": {
+    "grid_system": "Bento Grid Protocol Mode A (Tetris Grid) for B2C/Marketing. Mode B (Control Room) for B2B Sourcing Showroom.",
+    "spacing_philosophy": "Generous. Use 2-3x more spacing than typical. p-8, p-12, p-24 for section paddings. Let elements breathe like a museum exhibit.",
+    "borders": "1px solid champagne or subtle grey. No soft drop shadows for B2B; use sharp borders to delineate data."
+  },
+  "components": {
+    "hero": "Full-bleed or massive inset container. Must overlay a looping background video (simulated via high-res image placeholder with subtle scale animation if video fails). Overlay max bg-black/40. 'RASAA Manifesto' scrolling over it.",
+    "b2c_boutique": "Cardless layout. Large images with text placed elegantly below or beside. Asymmetric grids.",
+    "b2b_showroom": "Dense, precise UI. Shadcn forms heavily customized: sharp corners (rounded-none or max rounded-sm), flat solid backgrounds, clear hierarchical borders.",
+    "pan_india_map": "Interactive SVG with 'framer-motion'. Each state/cluster is a path. Hovering highlights the path in Champagne Gold and shows a tooltip of the artisan cluster.",
+    "navigation": "Crystal Glassmorphism (backdrop-blur-xl bg-white/70) for marketing, Solid Museum-White for B2B Dashboard.",
+    "footer": "Dark section (bg-[#0F0A0A]) containing the Traceability Ledger. High contrast shift."
+  },
+  "media": {
+    "hero_video_fallback": {
+      "url": "https://images.unsplash.com/photo-1773847099342-33b0381cbe0d?auto=format&fit=crop&q=80",
+      "description": "Golden threads on a loom, cinematic macro shot (use as background with slow pan/scale)"
+    },
+    "b2c_jewelry": {
+      "url": "https://images.pexels.com/photos/1395306/pexels-photo-1395306.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Pearl and diamond rings with gold accents"
+    },
+    "b2c_apparel": {
+      "url": "https://images.pexels.com/photos/1066171/pexels-photo-1066171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "High fashion model in studio"
+    },
+    "b2c_carpet": {
+      "url": "https://images.pexels.com/photos/6786956/pexels-photo-6786956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Ornate silk carpet texture"
+    },
+    "b2b_gemstones": {
+      "url": "https://images.unsplash.com/photo-1761717410058-5a2c296d0893?auto=format&fit=crop&q=80",
+      "description": "Blue sapphire and diamonds macro"
+    },
+    "b2b_textile": {
+      "url": "https://images.pexels.com/photos/6332015/pexels-photo-6332015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Traditional wooden loom"
+    },
+    "provenance_artisan": {
+      "url": "https://images.unsplash.com/photo-1773842298512-e49c9331cc3d?auto=format&fit=crop&q=80",
+      "description": "Person weaving colorful carpet"
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "stroke_width": 1.5,
+    "rules": "Use minimalist, thin-stroke icons to maintain the high-fashion editorial feel. Do not over-iconify; rely primarily on typography and whitespace."
+  },
+  "instructions_to_main_agent": [
+    "1. HYBRID ARCHITECTURE: The app requires a public marketing front (B2C + landing) and a gated B2B dashboard. Implement proper routing and Auth context.",
+    "2. LOGO: Create a bespoke text logo 'RASA LUXE' wrapped in an SVG or HTML block with a burgundy (#5D1A23) background and a stylized lotus icon (using lucide-react 'Flower2' or custom SVG path) if the actual image asset is missing.",
+    "3. TYPOGRAPHY: Import Bodoni Moda and Jost from Google Fonts in index.css. Apply them globally. Never use Inter for headings.",
+    "4. INTERACTIVE MAP: Use a pre-existing SVG path of India or an abstract representation. Use framer-motion to create hover states that reveal artisan clusters.",
+    "5. B2B ACCESS: Non-logged-in users trying to access B2B routes should see a beautifully designed 'Request Wholesale Access' form with deep burgundy branding. Authenticated users see the 'Material & Craft Library'.",
+    "6. TESTING: Every button, input, and significant interaction area MUST have a `data-testid` attribute.",
+    "7. BILINGUAL: Add a simple state toggle (EN/FR) in the header that changes key UI text elements.",
+    "8. TAILWIND CONFIG: Extend the tailwind.config.js with the custom color palette provided above."
+  ]
+}
